@@ -31,9 +31,3 @@ class ContactQuery(models.Model):
         return f"{self.name} - {self.subject}"
 
 
-
-
-class Tdl(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    image = models.ImageField(upload_to="tdls/", blank=True, null=True)

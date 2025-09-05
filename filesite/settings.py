@@ -12,14 +12,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
-
-import os
-import dj_database_url
-from pathlib import Path
-
-
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,18 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-6$37^q#_=u3@6$srmv!^pkasjpv1z(v!a9%=jl=auy_0=-x@t3'
 
-# SECURITY WARNING: don
-# 't run with debug turned on in production!
-# DEBUG = True
-# DEBUG = False
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-
-# ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['.onrender.com']
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
-
-
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -148,39 +132,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# # Static files (CSS, JS, Images)
-# STATIC_URL = '/static/'
-# STATIC_ROOT = BASE_DIR / 'staticfiles'   # For collectstatic (Render, PythonAnywhere)
 
-# # Media files (User uploads, images, etc.)
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / 'media'
-
-
-# gunicorn TDL_With_Om.wsgi
-# gunicorn filesite.wsgi
-
-
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [BASE_DIR / "static"]   # your app-level static
-# STATIC_ROOT = BASE_DIR / "staticfiles"     # for collectstatic
-
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / "media"
-
-
-
-
-
+from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = False   # turn off debug for production
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'   # for collectstatic on PythonAnywhere
 
-ALLOWED_HOSTS = ["*"]  # later replace * with your Render domain
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploads'
+STATIC_URL = '/static/'
 
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"

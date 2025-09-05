@@ -54,12 +54,3 @@ def contact(request):
         return redirect('contact')
 
     return render(request, 'fileapp/contact.html')
-
-
-from django.shortcuts import render
-from .models import Tdl
-
-def tdls_page(request):
-    tdls = Tdl.objects.all()
-    return render(request, "tdls.html", {"tdls": tdls})
-
